@@ -1,0 +1,3 @@
+sudo chmod 777 /dev/ttyUSB0
+
+roslaunch delivery_navigation manual_control.launch
