@@ -1,0 +1,49 @@
+<launch>
+  <arg name="host" default="192.168.0.100" />
+  <arg name="map_file" default="/home/$(env USER)/maps/map.yaml" />
+  <rosparam param="footprint" ns="/move_base/local_costmap">[[0.15,-0.35], [0.15,0.35], [-0.15,0.35], [-0.15,-0.35]]</rosparam>
+	<rosparam param="footprint" ns="/move_base/global_costmap">[[0.15,-0.35], [0.15,0.35], [-0.15,0.35], [-0.15,-0.35]]</rosparam>
+
+  <!-- <node name="joy_node" pkg="joy" type="joy_node" />
+
+  <node name="joy_to_cmd_vel" pkg="delivery_navigation" type="joy_to_cmd_vel">
+   <remap from="cmd_vel" to="RosAria/cmd_vel"/>
+  </node> -->
+
+  <node name="RosAria" pkg="rosaria" type="RosAria" />
+
+  <node respawn="true" name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.170 0 0.270 0 0 0 base_link laser 100" />
+
+  <node pkg="lms1xx" name="lms1xx" type="LMS1xx_node">
+    <param name="host" value="$(arg host)" />
+  </node>
+
+  <node name="amcl" pkg="amcl" type="amcl">
+    <param name="odom_alpha1" type="double" value="7" />
+    <param name="odom_alpha2" type="double" value="7" />
+    <param name="odom_alpha3" type="double" value="3.5" />
+    <param name="odom_alpha4" type="double" value="3.5" />
+    <param name="laser_max_beams" type="int" value="150" />
+    <param name="min_particles" type="int" value="300" />
+    <param name="max_particles" type="int" value="500" />
+    <param name="update_min_d" type="double" value="0.05" />
+    <param name="update_min_a" type="double" value="0.08" />
+  </node>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <remap from="cmd_vel" to="RosAria/cmd_vel"/>
+    <rosparam file="$(find delivery_navigation)/config/move_base.yaml" command="load" />
+    <rosparam file="$(find delivery_navigation)/config/costmap_common.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find delivery_navigation)/config/costmap_common.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find delivery_navigation)/config/costmap_local.yaml" command="load" />
+    <rosparam file="$(find delivery_navigation)/config/costmap_global.yaml" command="load" />
+    <rosparam file="$(find delivery_navigation)/config/planner_local.yaml" command="load" />
+    <rosparam file="$(find delivery_navigation)/config/planner_global.yaml" command="load" />
+  	</node>
+
+
+  <node pkg="rviz" type="rviz" args="-d '$(find delivery_navigation)/config/rviz/navigation.rviz'" name="visualizer" respawn="true" />
+
+</launch>

@@ -6,7 +6,7 @@
 
 #define TURN_DECAY_CONST 0.2 //旋回時の速度の係数
 
-float gain = 100.0;
+float gain = 10.0;
 bool Locking_flag = true;
 float x_vel,w_vel,joy_line,joy_ang = 0.0;
 
@@ -29,11 +29,11 @@ void joy_callback(const sensor_msgs::Joy& joy_msg)
 
   else if(joy_msg.buttons[10]!=0)//gain
   {
-     gain -= 10;
+     gain -= 5;
 	}
   else if(joy_msg.buttons[11]!=0)//gain
   {
-     gain += 10;
+     gain += 5;
   }
 
 	x_vel = gain*joy_line;

@@ -5,8 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /base_link1
         - /Map1
-        - /Map1/Status1
       Splitter Ratio: 0.509652495
     Tree Height: 558
   - Class: rviz/Selection
@@ -27,7 +27,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -116,12 +116,12 @@ Visualization Manager:
       Unreliable: false
       Value: false
     - Class: rviz/Axes
-      Enabled: false
-      Length: 0.100000001
+      Enabled: true
+      Length: 0.5
       Name: base_link
-      Radius: 0.00999999978
-      Reference Frame: base_link
-      Value: false
+      Radius: 0.0500000007
+      Reference Frame: map
+      Value: true
     - Class: rviz/Axes
       Enabled: false
       Length: 0.100000001
@@ -171,25 +171,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 15.7681837
+      Distance: 20.585535
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.15051803
-        Y: -1.43694508
-        Z: 7.99410827e-06
+        X: -6.42964506
+        Y: 0.278205991
+        Z: 8.24162544e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: -1.44479644
+      Pitch: 0.539797127
       Target Frame: base_link
       Value: ThirdPersonFollower (rviz)
-      Yaw: 1.85038757
+      Yaw: 3.12039375
     Saved: ~
 Window Geometry:
   Displays:
