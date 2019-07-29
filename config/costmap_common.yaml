@@ -1,0 +1,9 @@
+# 物体を障害物と見なして、コストマップに反映する距離
+obstacle_range: 4.0
+# ロボット前方のレイトレースエリア
+raytrace_range: 4.0
+
+# robot_radius: 0.4
+footprint_padding: 0.05
+inflation_radius: 0.3
+unknown_cost_value: 0

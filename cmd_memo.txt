@@ -9,5 +9,7 @@ rosbag record /scan /tf
 roslaunch delivery_navigation slam_gmapping_offline2.launch
 rosrun map_server map_saver
 
+roslaunch delivery_navigation navigation.launch
+
 
 rosrun tf view_frames
