@@ -1,3 +1,13 @@
 sudo chmod 777 /dev/ttyUSB0
 
 roslaunch delivery_navigation manual_control.launch
+
+roslaunch delivery_navigation slam_gmapping_realtime.launch
+
+roslaunch delivery_navigation slam_gmapping_offline1.launch
+rosbag record /scan /tf
+roslaunch delivery_navigation slam_gmapping_offline2.launch
+rosrun map_server map_saver
+
+
+rosrun tf view_frames

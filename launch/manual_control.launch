@@ -6,6 +6,6 @@
    <remap from="cmd_vel" to="RosAria/cmd_vel"/>
   </node>
 
-  <!-- <node name="RosAria" pkg="rosaria" type="RosAria" /> -->
+  <node name="RosAria" pkg="rosaria" type="RosAria" />
 
 </launch>

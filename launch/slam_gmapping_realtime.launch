@@ -1,0 +1,28 @@
+<launch>
+　	<arg name="host" default="192.168.0.100" />
+   <arg name="scan" default="scan"/>
+  <node name="joy_node" pkg="joy" type="joy_node" />
+
+  <node name="joy_to_cmd_vel" pkg="delivery_navigation" type="joy_to_cmd_vel">
+   <remap from="cmd_vel" to="RosAria/cmd_vel"/>
+  </node>
+
+  <node name="RosAria" pkg="rosaria" type="RosAria" />
+
+　	<node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.170 0 0.270 0 0 0 base_link laser 100" />
+
+   <node pkg="lms1xx" name="lms1xx" type="LMS1xx_node">
+   <param name="host" value="$(arg host)" />
+	 </node>
+
+  <node pkg="gmapping" type="slam_gmapping" name="mapper">
+      <param name="scan" value="$(arg scan)" />
+  		<param name="maxUrange" value="15.0" type="double" />
+  		<param name="xmax" value="20" type="double" />
+  		<param name="ymax" value="20" type="double" />
+  		<param name="xmin" value="-20" type="double" />
+  		<param name="ymin" value="-20" type="double" />
+  	</node>
+
+  　<node pkg="rviz" type="rviz" args="-d '$(find delivery_navigation)/config/rviz/mapping.rviz'" name="visualizer" respawn="true" />
+</launch>
