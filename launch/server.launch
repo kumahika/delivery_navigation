@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find roswww)/launch/roswww.launch" />
+  <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+
+  <!-- <node name="delivery_from_web_node" pkg="delivery_navigation" type="delivery_from_web_node"/> -->
+</launch>
