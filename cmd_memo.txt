@@ -10,6 +10,11 @@ roslaunch delivery_navigation slam_gmapping_offline2.launch
 rosrun map_server map_saver
 
 roslaunch delivery_navigation navigation.launch
+roslaunch delivery_navigation server.launch
 
+rosrun delivery_navigation delivery_from_web_node
 
 rosrun tf view_frames
+
+roslaunch delivery_navigation server.launch
+rrun delivery_navigation delivery_from_web_node

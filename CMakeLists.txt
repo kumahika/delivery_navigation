@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   nav_msgs
   tf
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -202,10 +203,6 @@ include_directories(
 # catkin_add_nosetests(test)
 
 add_executable(joy_to_cmd_vel src/joy_to_cmd_vel.cpp)
-# add_executable(twowheels_robot_odom src/twowheels_robot_odom.cpp)
-# add_executable(twowheels_robot_move src/twowheels_robot_move.cpp)
-# add_executable(mapdata_create src/mapdata_create.cpp)
+add_executable(delivery_from_web_node src/delivery_from_web.cpp)
 target_link_libraries(joy_to_cmd_vel ${catkin_LIBRARIES})
-# target_link_libraries(twowheels_robot_odom ${catkin_LIBRARIES})
-# target_link_libraries(twowheels_robot_move ${catkin_LIBRARIES})
-# target_link_libraries(mapdata_create ${catkin_LIBRARIES})
+target_link_libraries(delivery_from_web_node ${catkin_LIBRARIES})
