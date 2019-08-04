@@ -111,8 +111,8 @@ void delivery_from_web_node::chatter_Callback(const std_msgs::String& msg)
   int result3 = usr3.compare(msg.data.c_str());
   if(result1 == 0)
   {
-    x_axis = 8.846;
-    y_axis = -3.230;
+    x_axis = 8.049;
+    y_axis = -3.283;
     yaw_ang = 0.0;
     call_flag = 1;
     add_goal(x_axis, y_axis, yaw_ang); // start to goal
@@ -121,7 +121,7 @@ void delivery_from_web_node::chatter_Callback(const std_msgs::String& msg)
   {
     x_axis = 3.7608;
     y_axis = -8.191;
-    yaw_ang = 0.875;
+    yaw_ang = -0.875;
     call_flag = 1;
     add_goal(x_axis, y_axis, yaw_ang); // start to goal
   }
@@ -129,9 +129,9 @@ void delivery_from_web_node::chatter_Callback(const std_msgs::String& msg)
   {
     x_axis = 0.0;
     y_axis = 0.0;
-    yaw_ang = 0.0;
+    yaw_ang = 3.14;
     call_flag = 1;
-    add_goal(0.0, 0.0, 3.14); // back home
+    add_goal(x_axis, y_axis, yaw_ang); // back home
   }
   // printf("result1 = %d, result2 = %d, call_flag = %d\n", result1, result2, call_flag);
 }

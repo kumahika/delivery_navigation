@@ -1,4 +1,5 @@
 <launch>
+  <!-- <node pkg="tf" type="static_transform_publisher" name="kinect_base_link5" args="0 0 0 0 0 0 /map /base_link 100"/> -->
   <!-- <node pkg="tf" type="static_transform_publisher" name="kinect_base_link5" args="8.846 -3.230 0 0 0 0 /map /base_link 100"/> -->
   <node pkg="tf" type="static_transform_publisher" name="kinect_base_link5" args="3.7608 -8.191 0 0 0 0 /map /base_link 100"/>
 
