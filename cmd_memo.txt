@@ -1,20 +1,33 @@
+○ROSでよく使うコマンド
+catkin_make
+source devel/setup.bash
+
+○pionnerの接続用
 sudo chmod 777 /dev/ttyUSB0
 
+○DS3とのペアリング
+sudo sixpair
+sudo sixad -s
+
+○マニュアル操作に使うコマンド
 roslaunch delivery_navigation manual_control.launch
 
+○slam_gmappingに使うコマンド
 roslaunch delivery_navigation slam_gmapping_realtime.launch
-
 roslaunch delivery_navigation slam_gmapping_offline1.launch
 rosbag record /scan /tf
 roslaunch delivery_navigation slam_gmapping_offline2.launch
 rosrun map_server map_saver
 
+○navigtionに使うコマンド
 roslaunch delivery_navigation navigation.launch
-roslaunch delivery_navigation server.launch
 
+○Webからの通信に使うコマンド
+roslaunch delivery_navigation server.launch
 rosrun delivery_navigation delivery_from_web_node
 
-rosrun tf view_frames
+○deliveryシステムに使うコマンド
+roslaunch delivery_navigation navigation_web.launch
 
-roslaunch delivery_navigation server.launch
-rrun delivery_navigation delivery_from_web_node
+○デバック等に便利なコマンド
+rosrun tf view_frames
