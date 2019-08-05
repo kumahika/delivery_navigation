@@ -1,0 +1,167 @@
+/*header h1, h2*/
+body
+{
+	text-align: center;
+	/*color:#FF0000;*/
+}
+
+#content
+{
+   width: 940px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+header
+{
+	text-align: center;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+header h1
+{
+	font-family: 'BallparkWeiner', serif;
+	font-size: 2.5em;
+	font-weight: normal;
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+header h2
+{
+	font-family: Dayrom, serif;
+	font-size: 1.1em;
+	margin-top: 0px;
+	font-weight: normal;
+}
+
+
+#main_title
+{
+	display: inline-block;
+}
+
+
+/* Navigation */
+nav
+{
+	display: inline-block;
+	width: 740px;
+	text-align: center;
+}
+
+nav ul
+{
+	list-style-type: none;
+}
+
+nav li
+{
+	display: inline-block;
+	margin-right: 15px;
+}
+
+nav a
+{
+	font-size: 1.3em;
+	color: #181818;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+
+nav a:hover
+{
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+
+/* Corps */
+section
+{
+	/*display: inline-block;
+	border: 1px solid blue;
+	vertical-align: top;*/
+	margin-top: 15px;
+}
+
+article, aside
+{
+	display: inline-block;
+	vertical-align: top;
+	text-align: justify;
+}
+
+article
+{
+	width: 645px;
+	margin-left: 15px;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+#pub_article
+{
+	width: 920px;
+	margin-left: 0px;
+}
+
+article p
+{
+	font-size: 0.8em;
+}
+
+aside
+{
+	position: relative;
+	width: 235px;
+	background-color: #706b64;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 0.9em;
+	text-align: center;
+}
+
+/*#pioneer_img
+{
+	text-align: center;
+}*/
+
+#pioneer_img img
+{
+	border: 1px solid #181818;
+}
+
+#ads_img img
+{
+	max-width:100%;
+	max-height:100%;
+}
+
+aside img
+{
+	margin-right: 5px;
+}
+
+#state_txt
+{
+	font-size: 1.2em;
+}
+
+/* Footer */
+footer
+{
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 15px;
+}
+
+footer p
+{
+	font-size: 0.8em;
+}
