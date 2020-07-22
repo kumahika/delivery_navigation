@@ -1,4 +1,8 @@
 # **delivery_navigation package**
+This repo have two function. The first one is ROS navigation. The second one is web interface for delivery service.
+We have a short clip.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3L4T78DpFC4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # 1. Features
 - This pkg can control `pioneer 3-DX` manually.
