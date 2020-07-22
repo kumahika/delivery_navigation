@@ -58,7 +58,9 @@
 - Execution pioneer 3-DX
 
   Turn on the power of pioneer 3-DX (like this image), connect pioneer and laptop using USB-RS232C cable.
+  
   ![interface](https://github.com/kumahika/delivery_navigation/tree/master/img/pioneer_interface.jpg)
+  
   ```vb
   $ sudo chmod 777 /dev/ttyUSB0
   ```
