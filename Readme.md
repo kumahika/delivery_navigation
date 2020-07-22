@@ -8,14 +8,14 @@
 
 # 2. Dependency
 - Hardware
- - Base robot : `pioneer 3-DX`
- - Controller : `DualShock3 (DS3)`
+  - Base robot : `pioneer 3-DX`
+  - Controller : `DualShock3 (DS3)`
 
-|![Pioneer 3-DX](https://robots.ros.org/assets/img/robots/pioneer-3-dx/image.jpg)|<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/PlayStation3-DualShock3.png" width=200px>|
+![Pioneer 3-DX](https://robots.ros.org/assets/img/robots/pioneer-3-dx/image.jpg)<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/PlayStation3-DualShock3.png" width=200px>
 
 - Software
- - Ubuntu 16.04
- - ROS kinetic
+  - Ubuntu 16.04
+  - ROS kinetic
 
 # 3. Installation
 - `DualShock3 driver` (You can skip here if you don't use DS3)
@@ -58,6 +58,7 @@
 - Execution pioneer 3-DX
 
   Turn on the power of pioneer 3-DX (like this image), connect pioneer and laptop using USB-RS232C cable.
+  ![interface](https://github.com/kumahika/delivery_navigation/tree/master/img/pioneer_interface.jpg)
   ```vb
   $ sudo chmod 777 /dev/ttyUSB0
   ```
