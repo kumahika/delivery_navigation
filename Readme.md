@@ -10,7 +10,7 @@ We have a short clip (Click bellow image).
 - This pkg can execute `ROS navigation`
 - This pkg have `web function` of delivery system
 
-# 2. Dependency
+# 2. Requirements
 - Hardware
   - Base robot : `pioneer 3-DX`
   - Controller : `DualShock3 (DS3)`
