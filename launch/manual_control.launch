@@ -2,7 +2,7 @@
 
   <node name="joy_node" pkg="joy" type="joy_node"/>
 
-  <node name="joy_to_cmd_vel" pkg="delivery_navigation" type="joy_to_cmd_vel">
+  <node name="joy_to_cmd_vel" pkg="delivery_navigation" type="joy_to_cmd_vel" output = "screen">
    <remap from="cmd_vel" to="RosAria/cmd_vel"/>
   </node>
 

@@ -62,12 +62,15 @@ We have a short clip (Click bellow image).
 - Execution pioneer 3-DX
 
   Turn on the power of pioneer 3-DX (like this image), connect pioneer and laptop using USB-RS232C cable.
-  
+
   <img src="https://github.com/kumahika/delivery_navigation/blob/master/img/pioneer_interface.jpg" width=400px>
-  
+
   ```vb
   $ sudo chmod 777 /dev/ttyUSB0
   ```
+
+  This is key bind for manual control.
+  <img src="https://github.com/kumahika/delivery_navigation/blob/master/img/key.jpg" width=400px>
 
 - Execute any command below depending on your purpose
   ```vb
@@ -76,6 +79,9 @@ We have a short clip (Click bellow image).
 
   # Manual control
   $ roslaunch delivery_navigation manual_control.launch
+  ## If, Bluetooth js device not configured
+  $ roscore
+  $ rosparam set joy_node/dev "/dev/input/jsX" #X is number of your js device(DS3)
 
   # Creation a map using slam_gmapping
   $ roslaunch delivery_navigation slam_gmapping_realtime.launch
