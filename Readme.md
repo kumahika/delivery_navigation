@@ -70,7 +70,8 @@ We have a short clip (Click bellow image).
   ```
 
   This is key bind for manual control.
-  <img src="https://github.com/kumahika/delivery_navigation/blob/master/img/key.jpg" width=400px>
+  
+  <img src="https://github.com/kumahika/delivery_navigation/blob/master/img/key.png" width=400px>
 
 - Execute any command below depending on your purpose
   ```vb
