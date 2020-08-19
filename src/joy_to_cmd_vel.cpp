@@ -4,9 +4,9 @@
 #include "cmath"
 
 
-#define TURN_DECAY_CONST 0.2 //旋回時の速度の係数
+#define TURN_DECAY_CONST 0.5 //旋回時の速度の係数
 
-float gain = 10.0;
+float gain = 0.5;
 bool Locking_flag = true;
 float x_vel,w_vel,joy_line,joy_ang = 0.0;
 
@@ -29,13 +29,20 @@ void joy_callback(const sensor_msgs::Joy& joy_msg)
 
   else if(joy_msg.buttons[10]!=0)//gain
   {
-     gain -= 5;
+		if (gain>0){gain -= 0.05;}
+		else {gain = 0;}
+
 	}
   else if(joy_msg.buttons[11]!=0)//gain
   {
-     gain += 5;
+     gain += 0.05;
   }
-
+	else if(joy_msg.buttons[12]!=0)//Stop
+	{
+		 joy_line = 0;
+		 joy_ang = 0;
+	}
+	ROS_INFO("Speed(Max) %0.3f [m/s]", gain);
 	x_vel = gain*joy_line;
 	w_vel = gain*joy_ang*TURN_DECAY_CONST;
 
